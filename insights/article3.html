@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build vs. Colo vs. Cloud: True Infrastructure Cost Comparison | datacenterprices.com</title>
+<meta name="description" content="Cloud, colocation, or build your own? Real 2026 TCO math on an 8-GPU node — the hidden fees on both sides and the utilization rule that decides the winner.">
+<link rel="canonical" href="https://datacenterprices.com/insights/article3.html">
+<meta property="og:title" content="Build vs. Colo vs. Cloud: True Infrastructure Cost Comparison">
+<meta property="og:description" content="Cloud, colocation, or build your own? Real 2026 TCO math on an 8-GPU node — the hidden fees on both sides and the utilization rule that decides the winner.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://datacenterprices.com/images/photo-37730212.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Build vs. Colo vs. Cloud: True Infrastructure Cost Comparison","description":"Cloud, colocation, or build your own? Real 2026 TCO math on an 8-GPU node — the hidden fees on both sides and the utilization rule that decides the winner.","author":{"@type":"Organization","name":"Prime Domain Capital"},"publisher":{"@type":"Organization","name":"Prime Domain Capital"},"datePublished":"2026-10-17","mainEntityOfPage":{"@type":"WebPage","@id":"https://datacenterprices.com/insights/article3.html"}}
+</script>
+<style>
+
+:root{--bg:#050810;--bg2:#090e1a;--cy:#00e5ff;--cy-dim:rgba(0,229,255,.14);--tx:#dfe7f2;--mut:#7d8aa0;--ln:rgba(0,229,255,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;background:rgba(5,8,16,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.24em;color:var(--cy)}
+.nav-cta{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;background:var(--cy);color:#04121a;padding:10px 22px;text-decoration:none;font-weight:500;transition:.25s}
+.nav-cta:hover{background:#fff}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/photo-37730212.jpg') center/cover;opacity:.5}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,8,16,.97) 20%,rgba(5,8,16,.55) 60%,rgba(5,8,16,.3))}
+#stream{position:absolute;inset:0;pointer-events:none;opacity:.85}
+.hero-inner{position:relative;z-index:2;padding:120px 6vw 80px;max-width:1200px}
+.term{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--cy);margin-bottom:24px}
+.term::before{content:'▮ ';animation:blink 1.1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-weight:700;font-size:clamp(46px,7.6vw,108px);line-height:1.02;letter-spacing:-.02em}
+h1 .cy{color:var(--cy)}
+.hero-sub{max-width:600px;margin-top:26px;font-size:17px;font-weight:300;color:#b9c4d6}
+.hero-sub strong{color:var(--tx);font-weight:500}
+.hero-meta{display:flex;gap:14px;margin-top:40px;align-items:stretch;flex-wrap:wrap}
+.pricebox{border:1px solid var(--ln);padding:20px 30px;background:rgba(0,229,255,.04)}
+.pricebox .p{font-size:34px;font-weight:700;color:var(--cy)}
+.pricebox .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:var(--mut);margin-top:4px}
+.buy{align-self:stretch;display:flex;align-items:center;background:var(--cy);color:#04121a;font-weight:700;font-size:14px;letter-spacing:.18em;padding:0 46px;text-decoration:none;transition:.25s}
+.buy:hover{background:#fff}
+section{padding:100px 6vw;position:relative}
+.wrap{max-width:1140px;margin:0 auto}
+.sec-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--cy);margin-bottom:18px}
+h2{font-size:clamp(32px,4.4vw,58px);line-height:1.1;letter-spacing:-.015em;font-weight:700;max-width:840px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:52px;align-items:start}
+.grid2 p{color:#a9b4c8;font-weight:300;margin-bottom:18px;font-size:16px}
+.grid2 p strong{color:var(--tx);font-weight:500}
+.callout{font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.9;color:var(--cy);border:1px solid var(--ln);background:rgba(0,229,255,.05);padding:28px 30px}
+.callout .cm{color:var(--mut)}
+.narrative{background:var(--bg2);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.shots figure{position:relative;overflow:hidden;min-height:280px}
+.shots img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:saturate(.85) contrast(1.05);transition:transform 1.1s cubic-bezier(.2,.6,.2,1)}
+.shots figure:hover img{transform:scale(1.06)}
+.shots figcaption{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:14px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#fff;background:linear-gradient(transparent,rgba(5,8,16,.9))}
+.ticker{border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);margin-top:60px;overflow:hidden;white-space:nowrap;padding:16px 0;background:rgba(0,229,255,.03)}
+.ticker span{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--cy);display:inline-block;padding-right:60px;animation:tick 28s linear infinite}
+@keyframes tick{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.stat{border:1px solid var(--ln);padding:38px 32px;background:rgba(0,229,255,.02);transition:.3s}
+.stat:hover{background:rgba(0,229,255,.06);border-color:var(--cy)}
+.stat .n{font-size:clamp(36px,3.6vw,52px);font-weight:700;color:var(--cy)}
+.stat .t{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--mut);margin-top:12px;text-transform:uppercase}
+.buyer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.buyer{border:1px solid var(--ln);padding:34px 30px}
+.buyer .idx{font-family:'IBM Plex Mono',monospace;color:var(--cy);font-size:12px;letter-spacing:.2em;margin-bottom:14px}
+.buyer h3{font-size:21px;margin-bottom:12px}
+.buyer p{font-size:14.5px;color:#a9b4c8;font-weight:300}
+.cta-sec{background:var(--bg2);border-top:1px solid var(--ln);text-align:left}
+.cta-box{border:1px solid var(--cy);padding:70px 6vw;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;inset:0;background:url('images/photo-37730211.jpg') center/cover;opacity:.14}
+.cta-in{position:relative;z-index:2}
+.cta-in h2{margin-bottom:18px}
+.cta-in p{color:#a9b4c8;max-width:560px;font-weight:300;margin-bottom:36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.ghost{border:1px solid var(--cy);color:var(--cy);font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;padding:17px 38px;text-decoration:none;transition:.25s}
+.ghost:hover{background:rgba(0,229,255,.1)}
+footer{padding:54px 6vw;border-top:1px solid var(--ln);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--mut)}
+footer a{color:var(--cy);text-decoration:none}
+@media(max-width:860px){.grid2,.shots,.stats,.buyer-grid{grid-template-columns:1fr}section{padding:76px 6vw}.buy{padding:18px 40px}}
+
+
+.art-hero{min-height:76vh}
+.art-hero .hero-bg{background-image:url('../images/photo-37730212.jpg')}
+.cta-box::before{background-image:url('../images/photo-37730211.jpg')}
+.art-hero h1{font-size:clamp(38px,5.2vw,76px)}
+.byline{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.26em;color:var(--cy);margin-top:30px;text-transform:uppercase}
+.article{background:var(--bg)}
+.article-wrap{max-width:780px;margin:0 auto;padding:90px 6vw 30px}
+.article-wrap h2{font-weight:700;font-size:clamp(28px,3.4vw,42px);margin:58px 0 24px;letter-spacing:-.015em;line-height:1.15}
+.article-wrap h2:first-child{margin-top:0}
+.article-wrap p{color:#a9b4c8;font-weight:300;font-size:17px;margin-bottom:26px}
+.article-wrap p strong{color:var(--tx);font-weight:500}
+.article-wrap blockquote{font-family:'IBM Plex Mono',monospace;font-size:15px;line-height:1.9;color:var(--cy);border:1px solid var(--ln);background:rgba(0,229,255,.05);padding:28px 30px;margin:48px 0}
+.article-wrap ol,.article-wrap ul{color:#a9b4c8;font-weight:300;font-size:16.5px;margin:0 0 26px 26px}
+.article-wrap li{margin-bottom:12px}
+.more{margin:80px 0 40px;border-top:1px solid var(--ln);padding-top:48px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.more-card{border:1px solid var(--ln);padding:28px;text-decoration:none;display:block;transition:.3s;background:rgba(0,229,255,.02)}
+.more-card:hover{border-color:var(--cy);background:rgba(0,229,255,.06)}
+.more-card .mk{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:var(--cy);display:block;margin-bottom:12px}
+.more-card .mt{font-size:18px;font-weight:500;color:var(--tx);line-height:1.4}
+@media(max-width:860px){.more-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<nav><a class="brand" href="../index.html" style="text-decoration:none">PRIME_DOMAIN_CAPITAL</a><a class="nav-cta" href="https://www.afternic.com/domain/datacenterprices.com">BUY NOW — $15,888</a></nav>
+<header class="hero art-hero">
+  <div class="hero-bg"></div><div class="hero-veil"></div><canvas id="stream"></canvas>
+  <div class="hero-inner">
+    <p class="term">INSIGHTS // PRIME_DOMAIN_CAPITAL</p>
+    <h1>Build vs. Colo vs. Cloud: True Infrastructure Cost Comparison</h1>
+    <p class="hero-sub">Cloud, colocation, or build your own? Real 2026 TCO math on an 8-GPU node — the hidden fees on both sides and the utilization rule that decides the winner.</p>
+    <p class="byline">PRIME_DOMAIN_CAPITAL_INSIGHTS · 2026-10-17 · build vs colo vs cloud</p>
+  </div>
+</header>
+<main class="article"><div class="article-wrap">
+<p>The spreadsheet says cloud is three times more expensive than owning your GPUs. The spreadsheet is lying — on both sides. Cloud quotes omit egress, idle waste, and the premium baked into every GPU-hour. Ownership quotes omit staffing, refresh cycles, and the depreciation cliff that arrives with each new chip generation. In 2026, with AI infrastructure budgets under real scrutiny for the first time, the build-versus-colo-versus-cloud decision deserves honest arithmetic. Here it is.</p>
+<h2>The 8-GPU math, three ways</h2>
+<p>Take the standard building block of AI infrastructure: a single 8×H100 SXM5 node, the workhorse of training and large-scale inference. A DGX-class node costs $250,000–$350,000 to buy. Now run it three ways over three years at full utilization.</p>
+<p>GPU cloud on-demand — AWS, Azure, GCP list pricing — runs roughly $20,000 per month for this class of capacity. Three-year total: about $720,000. Committed 3-year reserved pricing cuts that to roughly $12,000 per month, or $432,000 over the term. Colocation with owned hardware: $280,000 in CapEx plus about $3,500 per month in colo and power, totaling roughly $406,000 over three years — and the hardware retains an estimated $60,000–$80,000 in residual value, bringing the effective cost to approximately $326,000–$346,000.</p>
+<p>The headline: at 100% utilization, colocation saves about 52% versus on-demand cloud and roughly 20% versus 3-year reserved. Even at 70% utilization, owned hardware in colo still beats on-demand. The crossover — where cloud becomes cheaper — sits around 40–50% utilization. Below that, the flexibility premium is worth paying; above it, you are renting your own inefficiency.</p>
+<p>Stretch the horizon to five years, the standard enterprise TCO window, and the gap widens further. Lenovo&#x27;s 2026 generative-AI TCO analysis, comparing on-premises infrastructure against hyperscaler list rates as of July 2026, puts an 8×H100 configuration at $4,306,416 for cloud on-demand over five years, $2,362,811 for 3-year reserved, and $871,912 for on-premises — before staffing. Even after adding a staffing delta of $300,000–$900,000 over the period, on-premises wins decisively for sustained 24/7 workloads. Note the methodology&#x27;s honesty: Lenovo excluded storage, egress fees, and support plans from the cloud side — the most charitable possible cloud comparison — and on-prem still won by multiples.</p>
+<p>A smaller-scale illustration makes the same point. A 2×H100 inference server — $50,000 of hardware amortized over 36 months ($1,389/month), power at $0.12/kWh ($121/month), a colo rack allocation ($900/month), and 0.15 FTE of engineer time ($1,875/month) — totals roughly $4,285 per month all-in. The cloud equivalents: CoreWeave reserved around $3,285/month for the same GPUs, AWS on-demand an order of magnitude more (with the caveat that AWS&#x27;s smallest H100 instance carries 8 GPUs — itself a pricing-structure lesson). For steady inference, the owned box wins; for bursty experimentation, the API wins. The workload decides, not the philosophy.</p>
+<h2>The costs both sides leave out</h2>
+<p>Cloud&#x27;s hidden ledger starts with egress. AWS charges $0.09 per GB for data transfer out beyond the free tier; at enterprise AI scale — training datasets in, model checkpoints out, inference traffic flowing — egress routinely adds 15–30% to the total AI bill, and it is the most commonly omitted line in cloud comparisons. Then the GPU premium: cloud providers charge 2–3x wholesale GPU rates on every GPU-hour, indefinitely — you never build equity, and the meter never stops. Then idle waste: reserved capacity you do not use is the most expensive kind. ICONIQ&#x27;s 2026 State of AI report found inference costs averaging 23% of revenue at scaling-stage AI companies — a line item large enough to decide the infrastructure question on its own.</p>
+<p>Ownership&#x27;s hidden ledger starts with people. H100 clusters demand specialist skills — InfiniBand networking, liquid-cooling operations, firmware lifecycle management — commanding 30–50% salary premiums over general ML engineers. The realistic staffing delta for on-premises inference is 0.5–1.5 FTE ($60,000–$180,000 per year at $120,000 fully loaded); omitting it is the single most common error in on-prem business cases. No in-house capability? Budget $15,000–$40,000 per month for a managed service provider for a cluster of meaningful size. Then the refresh cycle: GPU servers have a 3–5 year economic lifespan, and refresh adds roughly 20–30% to the five-year on-prem cost. Then the operational realities the spreadsheet never captures: 3–6 month hardware lead times, NVIDIA enterprise licensing at about $2,500 per GPU per year, 10% annual maintenance on hardware cost, facility readiness at roughly $12,000 per H100 node.</p>
+<p>Colocation sits between the two, and its economics are the most transparent: you buy the hardware once and rent the power, space, and cooling monthly. The colo operator absorbs the facility CapEx — the generators, the chillers, the building — and you keep the compute equity. For the utilization band between roughly 50% and 90%, it is usually the cheapest honest answer.</p>
+<h2>The decision rule that actually works</h2>
+<p>Forget tribal affiliation. The decision reduces to four questions. First, utilization: sustained above 50%? Own the hardware. Spiky or experimental? Rent the cloud. Second, duration: a 3–5 year horizon favors ownership; comparing over 12 months always favors cloud and always misleads. Third, staffing: do you have — or can you buy — the operational capability? If not, price the managed service into the colo column before comparing. Fourth, data gravity and compliance: GDPR, HIPAA, SOC 2, and sector AI-governance frameworks often settle the question before cost is considered, and sub-10ms inference latency requirements reliably favor colocated bare metal over multi-tenant cloud instances.</p>
+<p>The sophisticated answer, and the one most enterprises are converging on, is hybrid by workload: own the base load in colocation, burst to cloud for peaks, and keep training where the data lives. Cloud is a pricing model. Colocation is a real-estate decision. Owning hardware is a commitment. Match the instrument to the utilization curve — and re-run the math every renewal cycle, because the only constant in this market is that last year&#x27;s answer has expired.</p>
+<p>The company that becomes the pricing authority for AI infrastructure will own the most valuable search traffic in the sector. Datacenterprices.com is available for acquisition by that company — inquiries to info@primedomaincapital.com.</p>
+<div class="more"><p class="sec-label">// MORE_INSIGHTS</p><div class="more-grid"><a class="more-card" href="article1.html"><span class="mk">INSIGHT_01</span><span class="mt">Colocation Pricing 2026: What a Rack Really Costs by Market</span></a><a class="more-card" href="article2.html"><span class="mk">INSIGHT_02</span><span class="mt">Data Center Power Costs: The Hidden Variable in AI Infrastructure</span></a></div></div>
+</div></main>
+<section class="cta-sec"><div class="wrap"><div class="cta-box"><div class="cta-in">
+  <p class="sec-label">// ACQUIRE</p>
+  <h2>datacenterprices.com<br><span style="color:var(--cy)">$15,888</span></h2>
+  <p>Offered by Prime Domain Capital. Secure transfer via Afternic. Inquiries: <a href="mailto:info@primedomaincapital.com" style="color:var(--cy)">info@primedomaincapital.com</a></p>
+  <div class="cta-row">
+    <a class="buy" href="https://www.afternic.com/domain/datacenterprices.com" style="padding:17px 46px">ACQUIRE →</a>
+    <a class="ghost" href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a>
+  </div></div></div></div></section>
+<footer>
+  <span>© 2026 PRIME DOMAIN CAPITAL · DATACENTERPRICES.COM</span>
+  <span>TRANSFER VIA <a href="https://www.afternic.com/domain/datacenterprices.com">AFTERNIC</a> · <a href="mailto:info@primedomaincapital.com">CONTACT</a></span>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('stream'),x=c.getContext('2d'),W,H,P=[];
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+  size();addEventListener('resize',size);
+  for(var i=0;i<70;i++)P.push({x:Math.random(),y:Math.random(),l:Math.random()*.25+.06,s:Math.random()*2.2+.8,v:Math.random()*.004+.0015,o:Math.random()*.55+.2,hue:Math.random()<.85});
+  (function tick(){
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];
+      p.y-=p.v;if(p.y<-p.l){p.y=1+p.l;p.x=Math.random()}
+      var g=x.createLinearGradient(0,p.y*H,0,(p.y+p.l)*H);
+      var col=p.hue?'0,229,255':'160,190,255';
+      g.addColorStop(0,'rgba('+col+',0)');g.addColorStop(1,'rgba('+col+','+p.o+')');
+      x.strokeStyle=g;x.lineWidth=p.s;
+      x.beginPath();x.moveTo(p.x*W,p.y*H);x.lineTo(p.x*W,(p.y+p.l)*H);x.stroke();
+      x.fillStyle='rgba('+col+','+Math.min(1,p.o+.25)+')';
+      x.fillRect(p.x*W-p.s/2,(p.y+p.l)*H-p.s/2,p.s,p.s);
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5fb51d1999084c91989809d7608061e0"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
