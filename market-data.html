@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Center Prices: Colocation, Power &amp; Build Costs — Market Data | datacenterprices.com</title>
+<meta name="description" content="Market data for datacenterprices.com: aggregated public figures with sources, updated October 25, 2026.">
+<link rel="canonical" href="https://datacenterprices.com/market-data">
+<meta property="og:title" content="Data Center Prices: Colocation, Power & Build Costs — Market Data | datacenterprices.com">
+<meta property="og:description" content="Market data for datacenterprices.com: aggregated public figures with sources, updated October 25, 2026.">
+<meta property="og:url" content="https://datacenterprices.com/market-data">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#050810;--bg2:#090e1a;--cy:#00e5ff;--cy-dim:rgba(0,229,255,.14);--tx:#dfe7f2;--mut:#7d8aa0;--ln:rgba(0,229,255,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;background:rgba(5,8,16,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.24em;color:var(--cy)}
+.nav-cta{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;background:var(--cy);color:#04121a;padding:10px 22px;text-decoration:none;font-weight:500;transition:.25s}
+.nav-cta:hover{background:#fff}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,8,16,.97) 20%,rgba(5,8,16,.55) 60%,rgba(5,8,16,.3))}
+.hero-inner{position:relative;z-index:2;padding:120px 6vw 80px;max-width:1200px}
+.term{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--cy);margin-bottom:24px}
+.term::before{content:'▮ ';animation:blink 1.1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-weight:700;font-size:clamp(46px,7.6vw,108px);line-height:1.02;letter-spacing:-.02em}
+h1 .cy{color:var(--cy)}
+.hero-sub{max-width:600px;margin-top:26px;font-size:17px;font-weight:300;color:#b9c4d6}
+.hero-sub strong{color:var(--tx);font-weight:500}
+.hero-meta{display:flex;gap:14px;margin-top:40px;align-items:stretch;flex-wrap:wrap}
+.pricebox{border:1px solid var(--ln);padding:20px 30px;background:rgba(0,229,255,.04)}
+.pricebox .p{font-size:34px;font-weight:700;color:var(--cy)}
+.pricebox .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:var(--mut);margin-top:4px}
+.buy{align-self:stretch;display:flex;align-items:center;background:var(--cy);color:#04121a;font-weight:700;font-size:14px;letter-spacing:.18em;padding:0 46px;text-decoration:none;transition:.25s}
+.buy:hover{background:#fff}
+section{padding:130px 6vw;position:relative}
+.wrap{max-width:1140px;margin:0 auto}
+.sec-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--cy);margin-bottom:18px}
+h2{font-size:clamp(32px,4.4vw,58px);line-height:1.1;letter-spacing:-.015em;font-weight:700;max-width:840px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:52px;align-items:start}
+.grid2 p{color:#a9b4c8;font-weight:300;margin-bottom:18px;font-size:16px}
+.grid2 p strong{color:var(--tx);font-weight:500}
+.callout{font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.9;color:var(--cy);border:1px solid var(--ln);background:rgba(0,229,255,.05);padding:28px 30px}
+.callout .cm{color:var(--mut)}
+.narrative{background:var(--bg2);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.shots figure{position:relative;overflow:hidden;min-height:280px}
+.shots img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:saturate(.85) contrast(1.05);transition:transform 1.1s cubic-bezier(.2,.6,.2,1)}
+.shots figure:hover img{transform:scale(1.06)}
+.shots figcaption{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:14px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#fff;background:linear-gradient(transparent,rgba(5,8,16,.9))}
+.ticker{border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);margin-top:60px;overflow:hidden;white-space:nowrap;padding:16px 0;background:rgba(0,229,255,.03)}
+.ticker span{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--cy);display:inline-block;padding-right:60px;animation:tick 28s linear infinite}
+@keyframes tick{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.stat{border:1px solid var(--ln);padding:38px 32px;background:rgba(0,229,255,.02);transition:.3s}
+.stat:hover{background:rgba(0,229,255,.06);border-color:var(--cy)}
+.stat .n{font-size:clamp(36px,3.6vw,52px);font-weight:700;color:var(--cy)}
+.stat .t{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--mut);margin-top:12px;text-transform:uppercase}
+.buyer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.buyer{border:1px solid var(--ln);padding:34px 30px}
+.buyer .idx{font-family:'IBM Plex Mono',monospace;color:var(--cy);font-size:12px;letter-spacing:.2em;margin-bottom:14px}
+.buyer h3{font-size:21px;margin-bottom:12px}
+.buyer p{font-size:14.5px;color:#a9b4c8;font-weight:300}
+.cta-sec{background:var(--bg2);border-top:1px solid var(--ln);text-align:left}
+.cta-box{border:1px solid var(--cy);padding:70px 6vw;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;inset:0;background:url('images/photo-37730211.jpg') center/cover;opacity:.14}
+.cta-in{position:relative;z-index:2}
+.cta-in h2{margin-bottom:18px}
+.cta-in p{color:#a9b4c8;max-width:560px;font-weight:300;margin-bottom:36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.ghost{border:1px solid var(--cy);color:var(--cy);font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;padding:17px 38px;text-decoration:none;transition:.25s}
+.ghost:hover{background:rgba(0,229,255,.1)}
+footer{padding:54px 6vw;border-top:1px solid var(--ln);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--mut)}
+footer a{color:var(--cy);text-decoration:none}
+@media(max-width:860px){.grid2,.shots,.stats,.buyer-grid{grid-template-columns:1fr}section{padding:76px 6vw}.buy{padding:18px 40px}}
+</style>
+<style>
+/* ---- market-data page additions ---- */
+.dp-wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 3rem}
+.dp-updated{display:inline-block;border:1px solid #b08d57;padding:.45rem .9rem;border-radius:999px;font-size:.9rem;margin:1rem 0}
+.dp-updated strong{color:#b08d57}
+.dp-table{width:100%;border-collapse:collapse;margin:1.2rem 0 2rem;font-size:.95rem}
+.dp-table th,.dp-table td{border-bottom:1px solid rgba(176,141,87,.35);padding:.6rem .5rem;text-align:left;vertical-align:top;overflow-wrap:break-word;word-break:break-word}
+.dp-table th{color:#b08d57}
+.dp-table td a{overflow-wrap:break-word;word-break:break-word}
+.trend-up{color:#4caf7d;font-weight:700;white-space:nowrap}
+.trend-down{color:#d97b6c;font-weight:700;white-space:nowrap}
+.trend-base{color:#b08d57;font-weight:700;white-space:nowrap}
+.dp-note{background:rgba(176,141,87,.12);border-left:3px solid #b08d57;padding:1rem 1.2rem;margin:1.5rem 0}
+.dp-note h3,.dp-wrap h2,.dp-wrap h3{overflow-wrap:break-word;word-break:break-word}
+.dp-wrap h1,.dp-wrap h2{overflow-wrap:break-word;word-break:break-word}
+.dp-cta{margin:2rem 0}
+.dp-cta a{display:inline-block;padding:.9rem 1.4rem;min-height:44px;line-height:1.4}
+.dp-changelog{border-top:1px solid rgba(176,141,87,.35);margin-top:2.5rem;padding-top:1rem}
+@media(max-width:480px){.dp-wrap{padding:1.25rem .9rem 2rem}.dp-table{font-size:.85rem}.dp-table th,.dp-table td{padding:.5rem .35rem}}
+
+/* Phase 1 assembly 2026-10-31 */
+@media (max-width:900px){h1{font-size:clamp(44px,11vw,72px)!important}}
+
+/* Phase 1 assembly 2026-10-31 — nav solid correction */
+@media (max-width:900px){nav{background:rgb(5,8,16)!important;backdrop-filter:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "datacenterprices.com — Data Center Prices: Colocation, Power & Build Costs — Market Data",
+  "description": "Aggregated public market figures for datacenterprices.com, with source attribution for every figure. Information only, not investment or professional advice.",
+  "temporalCoverage": "2013–2026",
+  "dateModified": "2026-10-25",
+  "creator": {
+    "@type": "Organization",
+    "name": "Prime Domain Capital"
+  },
+  "sourceOrganization": [
+    "https://www.cbre.com",
+    "https://www.jll.com",
+    "https://www.equinix.com"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://datacenterprices.com/market-data"
+}
+</script>
+<style>
+/* Mobile rendering fix 2026-10-31: domain H1 lines, stacked nav, header clearance */
+@media (max-width:900px){
+main h1{overflow-wrap:normal!important;word-break:normal!important}
+nav:not(.toc){flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+.topbar{flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+main{padding-top:120px!important}
+main h1{font-size:clamp(30px,8.5vw,58px)!important;line-height:1.15!important}
+}
+</style>
+</head>
+<body>
+<nav><div class="brand">Prime Domain Capital</div><div class="price-tag">Buy Now <b>$15,888</b></div></nav>
+<main class="dp-wrap">
+<p class="dp-updated">Last updated: <strong>October 25, 2026</strong> &middot; Refresh cadence: <strong>MONTHLY</strong> &middot; Trend tracking starts with this edition except where a prior-period figure is shown.</p>
+<h1>Data Center Prices: Colocation, Power &amp; Build Costs — Market Data</h1>
+<p>Data center pricing has flipped from a buyer&#x27;s market to a landlord&#x27;s market, and the numbers now read like a vacancy report with rent attached. National vacancy sits near historic lows while asking rents climb for a fourth straight year — a combination that leaves tenants paying more for space that is harder to find.</p>
+<p>The figures below separate asking rents from signed economics. Asking rents are what landlords publish for a 250–500 kW requirement; build costs and power prices explain why those rents keep rising even as construction hits records. Treat any single per-kW figure as a market quote, not a quote for your requirement.</p>
+
+<h2>Colocation asking rents</h2>
+<table class="dp-table"><thead><tr><th>Figure</th><th>Value</th><th>Trend vs prior period</th><th>Source</th></tr></thead><tbody>
+<tr><td>National average lease rate, primary markets</td><td>$194.95 per kW per month</td><td>Prior: prior year, up 6.5% year over year — fourth straight annual increase<br><span class="trend-up">▲ Up 6.5% YoY</span></td><td><a href="https://www.cbre.com/press-releases/silicon-valley-data-centers-expands-modestly-as-power-rich-states-capture-mega-campus-growth">CBRE North American Data Center Trend Report, via CBRE press release</a></td></tr>
+<tr><td>Average asking rent, 250–500 kW, primary North American markets (H1 2026)</td><td>$204.69 per kW per month</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://colocationscout.com/data-center-pricing-benchmarks.html">CBRE, via Colocation Scout pricing benchmarks</a></td></tr>
+<tr><td>Silicon Valley, 10 MW+ requirements</td><td>$180–$275 per kW per month</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://colocationscout.com/data-center-pricing-benchmarks.html">CBRE, via Colocation Scout pricing benchmarks</a></td></tr>
+<tr><td>Northern Virginia, 10 MW+ requirements</td><td>About $160–$185 per kW per month</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.datacenterfrontier.com/site-selection/news/55401462/cbre-record-data-center-construction-fails-to-ease-capacity-crunch">CBRE, via Data Center Frontier</a></td></tr>
+<tr><td>Northern Virginia asking rents, Q1 2026 (CBRE 250–500 kW benchmark)</td><td>$190–$235 per kW per month; Frankfurt $235–$265</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.dcmarketinsights.com/report/multi-tenant-data-center-market">CBRE, via DC Market Insights</a></td></tr>
+<tr><td>FLAPD markets (London, Frankfurt, Amsterdam, Paris, Dublin), 20 MW+ future capacity</td><td>Up to £145 ($193) per kW in London; €145 ($168) per kW in the other four; CBRE expects FLAPD pricing to rise 12% in 2026</td><td>Prior: 2025 pricing<br><span class="trend-up">▲ Up ~12% expected</span></td><td><a href="https://www.datacenterdynamics.com/en/news/flapd-capacity-pricing-expected-to-rise-by-12-percent-this-year-says-cbre/">CBRE, via Data Center Dynamics</a></td></tr>
+<tr><td>Average revenue per billed cabinet (Equinix, worldwide, Q2 2026)</td><td>$2,538 per month, including interconnection</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://colocationscout.com/data-center-pricing-benchmarks.html">Equinix, via Colocation Scout pricing benchmarks</a></td></tr>
+</tbody></table>
+<h2>Supply, vacancy, power and build costs</h2>
+<table class="dp-table"><thead><tr><th>Figure</th><th>Value</th><th>Trend vs prior period</th><th>Source</th></tr></thead><tbody>
+<tr><td>National vacancy rate</td><td>1.4% — historic low</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.cbre.com/press-releases/silicon-valley-data-centers-expands-modestly-as-power-rich-states-capture-mega-campus-growth">CBRE, via CBRE press release</a></td></tr>
+<tr><td>Silicon Valley inventory, H2 2025</td><td>489.2 MW, up 4% year over year; vacancy 4.7%, up from 4.5% in H1 2025</td><td>Prior: H2 2024 inventory; H1 2025 vacancy<br><span class="trend-base">● Mixed</span></td><td><a href="https://www.cbre.com/press-releases/silicon-valley-data-centers-expands-modestly-as-power-rich-states-capture-mega-campus-growth">CBRE, via CBRE press release</a></td></tr>
+<tr><td>Northern Virginia inventory / under construction, H1</td><td>4,496.5 MW inventory; 2,420.2 MW under construction, up 16.5%; vacancy about 0.24%; 467.6 MW net absorption</td><td>Prior: construction up 16.5% on the prior period<br><span class="trend-up">▲ Construction up 16.5%</span></td><td><a href="https://www.datacenterfrontier.com/site-selection/news/55401462/cbre-record-data-center-construction-fails-to-ease-capacity-crunch">CBRE, via Data Center Frontier</a></td></tr>
+<tr><td>Build cost per MW (JLL 2026 global average, before land and compute)</td><td>$11.3 million standard; $15–$20 million+ AI-optimized</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://colocationscout.com/data-center-pricing-benchmarks.html">JLL, via Colocation Scout pricing benchmarks</a></td></tr>
+<tr><td>Power cost, Northern Virginia</td><td>$0.095–$0.13 per kWh; Phoenix $0.058–$0.078; Dallas–Fort Worth $0.0972</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://colocationscout.com/data-center-pricing-benchmarks.html">Operator/utility figures, via Colocation Scout pricing benchmarks</a></td></tr>
+<tr><td>Historical asking-rent turn (CBRE)</td><td>Average asking rent fell 16.9% from 2013–2021, then rose 18.6% in 2023 (from $137.86 to $163.44 per kW per month, 250–500 kW)</td><td>Prior: 2013–2021 decline<br><span class="trend-up">▲ Turned up in 2023</span></td><td><a href="https://www.datacenterdynamics.com/en/news/ai-demand-and-limited-capacity-drive-us-data-center-prices-up-19/">CBRE, via Data Center Dynamics</a></td></tr>
+</tbody></table>
+
+<div class="dp-note"><h3>Methodology</h3><p>Included: CBRE published asking rents and vacancy figures (as reported in CBRE releases and trade-press summaries of CBRE reports), JLL build-cost averages, and utility/operator power prices as compiled in public benchmarks. Excluded: negotiated signed rents, which operators do not publish, and any broker&#x27;s private comp set. Asking rents vary by requirement size — the requirement size is stated on every rent figure — so figures from different requirement tiers are not averaged together.</p>
+<p>Trend labels: &ldquo;Baseline (October 2026) — trend tracking starts with the next refresh&rdquo; means no prior-period figure from the same source was available this session, so no movement is claimed. Where a prior figure is shown, the trend compares the current figure with that prior figure from the same source.</p></div>
+<div class="dp-note"><h3>Disclaimer</h3><p>Figures on this page are aggregated public estimates compiled for information only. They are not investment advice, professional advice, or an offer to buy or sell any security or asset. Figures change as sources revise or republish them; verify any figure against its linked source before relying on it.</p></div>
+<div class="dp-cta"><a class="btn" href="https://www.afternic.com/domain/datacenterprices.com">Buy datacenterprices.com — $15,888 on Afternic</a> &nbsp; <a href="mailto:info@primedomaincapital.com?subject=datacenterprices.com%20market%20data%20inquiry">info@primedomaincapital.com</a></div>
+<p>This domain is offered by Prime Domain Capital. Contact only at <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a>.</p>
+<section class="dp-changelog"><h2>Changelog</h2>
+<ul><li><strong>October 2026:</strong> First edition, published as a staged page. Figures compiled from the public sources listed in SOURCES.md, with trend indicators and baseline labels as shown above. Next refresh follows the MONTHLY cadence in SOURCES.md; the sitemap lastmod for this page is to be updated on every refresh once deployed.</li></ul></section>
+</main>
+<footer>Offered by <strong>Prime Domain Capital</strong> &middot; <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script>
+<p class="back-home" style="display:block;text-align:center;padding:28px 16px;font-size:15px"><a href="https://datacenterprices.com/" style="color:inherit">&larr; Back to datacenterprices.com</a></p>
+</body>
+</html>
