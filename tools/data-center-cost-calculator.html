@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Center Cost Calculator 2026: Colocation &amp; Build Costs by Market | datacenterprices.com</title>
+<meta name="description" content="Estimate colocation and build costs from published 2026 market rates: Northern Virginia $158–$203 per kW per month, national average $194.95, build $11.3 million per MW. Every rate comes from CBRE and JLL figures published on datacenterprices.com.">
+<link rel="canonical" href="https://datacenterprices.com/tools/data-center-cost-calculator">
+<meta property="og:title" content="Data Center Cost Calculator 2026: Colocation &amp; Build Costs by Market">
+<meta property="og:description" content="Estimate colocation and build costs from published 2026 market rates: Northern Virginia $158–$203 per kW per month, national average $194.95, build $11.3 million per MW.">
+<meta property="og:url" content="https://datacenterprices.com/tools/data-center-cost-calculator">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;family=IBM+Plex+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Data Center Cost Calculator 2026: Colocation & Build Costs by Market",
+      "description": "Estimate colocation and build costs from published 2026 market rates: Northern Virginia $158–$203 per kW per month, national average $194.95, build $11.3 million per MW. Every rate comes from CBRE and JLL figures published on datacenterprices.com.",
+      "url": "https://datacenterprices.com/tools/data-center-cost-calculator",
+      "mainEntityOfPage": "https://datacenterprices.com/tools/data-center-cost-calculator",
+      "datePublished": "2026-11-15",
+      "dateModified": "2026-11-15",
+      "author": {"@type": "Organization", "name": "Prime Domain Capital"},
+      "publisher": {"@type": "Organization", "name": "Prime Domain Capital"}
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Data Center Cost Calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web browser",
+      "description": "An interactive calculator that estimates monthly colocation cost and total contract cost from published 2026 per-kW market rates, and estimates construction cost per MW from published build-cost benchmarks.",
+      "url": "https://datacenterprices.com/tools/data-center-cost-calculator",
+      "isAccessibleForFree": true,
+      "author": {"@type": "Organization", "name": "Prime Domain Capital"}
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#050810;--bg2:#090e1a;--cy:#00e5ff;--cy-dim:rgba(0,229,255,.14);--tx:#dfe7f2;--mut:#7d8aa0;--ln:rgba(0,229,255,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;background:rgba(5,8,16,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.24em;color:var(--cy);text-decoration:none}
+.nav-cta{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;background:var(--cy);color:#04121a;padding:10px 22px;text-decoration:none;font-weight:500;transition:.25s}
+.nav-cta:hover{background:#fff}
+.hero{position:relative;padding:150px 6vw 60px;background:linear-gradient(160deg,#070d1d 0%,#050810 55%,#081120 100%);border-bottom:1px solid var(--ln)}
+.hero-inner{max-width:1100px;margin:0 auto}
+.term{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--cy);margin-bottom:24px}
+.term::before{content:'▮ ';animation:blink 1.1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-weight:700;font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.02em}
+h1 .cy{color:var(--cy)}
+.hero-sub{max-width:640px;margin-top:26px;font-size:17px;font-weight:300;color:#b9c4d6}
+.hero-sub strong{color:var(--tx);font-weight:500}
+.hero-meta{margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--mut)}
+main{max-width:1100px;margin:0 auto;padding:56px 6vw 80px}
+.sec-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--cy);margin-bottom:18px}
+h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
+.lede{font-size:18px;font-weight:300;color:#b9c4d6;max-width:760px;margin-bottom:14px}
+.lede strong{color:var(--tx);font-weight:500}
+.body-p{color:#b9c4d6;max-width:760px;margin-bottom:14px;font-weight:300}
+.body-p strong{color:var(--tx);font-weight:500}
+.mode-row{display:flex;gap:0;margin:34px 0 0;border:1px solid var(--ln);width:fit-content;max-width:100%}
+.mode-btn{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;padding:14px 28px;background:transparent;color:var(--mut);border:0;cursor:pointer}
+.mode-btn[aria-pressed="true"]{background:var(--cy);color:#04121a;font-weight:500}
+.calc{margin-top:0;border:1px solid var(--ln);background:var(--bg2);padding:34px 30px}
+.field{margin-bottom:22px}
+.field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--cy);margin-bottom:8px}
+.field .hint{font-size:13px;color:var(--mut);margin-top:6px;font-weight:300}
+.field input[type="number"],.field select{width:100%;max-width:420px;background:#050810;border:1px solid var(--ln);color:var(--tx);font-family:'IBM Plex Mono',monospace;font-size:16px;padding:13px 14px;border-radius:0}
+.field input[type="number"]:focus,.field select:focus{outline:1px solid var(--cy)}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.quick button{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 14px;background:transparent;border:1px solid var(--ln);color:var(--tx);cursor:pointer}
+.quick button:hover{border-color:var(--cy);color:var(--cy)}
+.check{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;max-width:640px}
+.check input{width:18px;height:18px;margin-top:3px;accent-color:var(--cy);flex-shrink:0}
+.check .check-tx{font-size:14px;font-weight:300;color:#b9c4d6}
+.check .check-tx strong{color:var(--tx);font-weight:500}
+.err{color:#ff7a7a;font-size:13px;font-family:'IBM Plex Mono',monospace;margin-top:6px;display:none}
+.results{margin-top:30px;border-top:1px solid var(--ln);padding-top:26px}
+.results .res-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--cy);margin-bottom:10px}
+.res-big{font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.res-big .cy{color:var(--cy)}
+.res-line{margin-top:12px;font-size:15px;color:#b9c4d6;font-weight:300}
+.res-line strong{color:var(--tx);font-weight:500}
+.res-note{margin-top:20px;font-size:13px;color:var(--mut);border-left:2px solid var(--ln);padding-left:14px;max-width:680px}
+.res-note strong{color:var(--tx);font-weight:500}
+table{width:100%;border-collapse:collapse;margin:22px 0 8px;font-size:14px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--ln);vertical-align:top}
+th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--cy);font-weight:500}
+td{color:#b9c4d6;font-weight:300}
+td strong{color:var(--tx);font-weight:500}
+.tbl-wrap{overflow-x:auto}
+.src{font-size:12px;color:var(--mut);margin-bottom:34px}
+.more-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.more-card{display:block;border:1px solid var(--ln);padding:22px;text-decoration:none;transition:.25s}
+.more-card:hover{border-color:var(--cy)}
+.more-card .mk{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--cy)}
+.more-card .mt{display:block;margin-top:10px;font-size:16px;line-height:1.4}
+.cta-sec{padding:70px 6vw}
+.cta-box{max-width:1100px;margin:0 auto;border:1px solid var(--ln);padding:54px 40px;text-align:center;background:var(--bg2)}
+.cta-box h2{margin-bottom:10px}
+.cta-box p{color:#b9c4d6;font-weight:300}
+.cta-row{display:flex;gap:14px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+.buy{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;background:var(--cy);color:#04121a;padding:17px 46px;text-decoration:none;font-weight:500}
+.buy:hover{background:#fff}
+.ghost{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;border:1px solid var(--ln);color:var(--tx);padding:17px 30px;text-decoration:none}
+.ghost:hover{border-color:var(--cy)}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:28px 4vw;border-top:1px solid var(--ln);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--mut)}
+footer a{color:var(--tx);text-decoration:none}
+@media(max-width:640px){
+  .hero{padding:120px 5vw 44px}
+  main{padding:40px 5vw 60px}
+  .calc{padding:24px 18px}
+  .mode-btn{padding:12px 16px;font-size:12px}
+  .cta-box{padding:40px 20px}
+  h1{font-size:clamp(34px,11vw,44px)}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="https://datacenterprices.com/">PRIME_DOMAIN_CAPITAL</a>
+  <a class="nav-cta" href="https://www.afternic.com/domain/datacenterprices.com">BUY NOW — $15,888</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="term">TOOLS // PRIME_DOMAIN_CAPITAL</p>
+    <h1>What does the power <span class="cy">cost?</span></h1>
+    <p class="hero-sub">A buyer walked into Ashburn in early 2026 with a 500&nbsp;kW requirement and three quotes. The cheapest headline rate was <strong>$158 per kW per month</strong>. The invoice ran 30% higher. That gap — between the rate on the quote and the rate on the invoice — is what this calculator prices. Every rate below comes from figures already published on this site, from CBRE and JLL benchmarks, with the source named on each line.</p>
+    <p class="hero-meta">RATES: CBRE &amp; JLL VIA DATACENTERPRICES.COM MARKET DATA · LAST UPDATED OCTOBER 25, 2026</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <p class="sec-label">// THE CALCULATOR</p>
+    <h2>Price the power, not the rack</h2>
+    <p class="lede">Colocation is sold by the kilowatt-month, and the per-kW rate is the number that decides the invoice. In 2026 the national average across primary North American markets is <strong>$194.95 per kW per month</strong>, according to CBRE — up 6.5% year over year, the fourth straight annual increase — while national vacancy sits at <strong>1.4%</strong>, a historic low. At that vacancy, the rate on the quote is a starting point, not a price.</p>
+    <p class="body-p">Two facts shape every result this page produces. First, asking rents are not signed rents: the figures below are what landlords publish, and operators do not publish what tenants actually sign. Second, the headline rate is the smallest line on the invoice. Broker analysis finds that power billing model, cross-connects, and remote hands add <strong>25–30%</strong> to the real monthly cost, with the full range running 20–60% depending on connectivity. This calculator shows the headline rate and the loaded cost side by side, so the comparison is honest.</p>
+
+    <div class="mode-row" role="group" aria-label="Calculator mode">
+      <button type="button" class="mode-btn" id="mode-colo" aria-pressed="true" onclick="setMode('colo')">COLOCATION — MONTHLY LEASE</button>
+      <button type="button" class="mode-btn" id="mode-build" aria-pressed="false" onclick="setMode('build')">BUILD — ONE-TIME CONSTRUCTION</button>
+    </div>
+
+    <div class="calc" id="calc-colo">
+      <div class="field">
+        <label for="kw">POWER CAPACITY — kW</label>
+        <input type="number" id="kw" value="500" min="1" max="100000" step="1" inputmode="numeric" oninput="calcColo()">
+        <p class="err" id="kw-err">Enter a capacity between 1 and 100,000 kW.</p>
+        <div class="quick">
+          <button type="button" onclick="setKw(100)">100 kW</button>
+          <button type="button" onclick="setKw(250)">250 kW</button>
+          <button type="button" onclick="setKw(500)">500 kW</button>
+          <button type="button" onclick="setKw(1000)">1 MW</button>
+          <button type="button" onclick="setKw(5000)">5 MW</button>
+        </div>
+        <p class="hint">Continuous IT load. 1 MW = 1,000 kW. CBRE's 250–500 kW benchmark band is the most quoted requirement size in the published data.</p>
+      </div>
+
+      <div class="field">
+        <label for="market">MARKET</label>
+        <select id="market" onchange="calcColo()">
+          <option value="nova">Northern Virginia (Ashburn) — $158–$203 / kW / mo</option>
+          <option value="dallas">Dallas–Fort Worth — $158–$203 / kW / mo</option>
+          <option value="chicago">Chicago — $179–$230 / kW / mo</option>
+          <option value="siliconvalley">Silicon Valley — $179–$225 / kW / mo</option>
+          <option value="atlanta">Atlanta — $158–$203 / kW / mo</option>
+          <option value="phoenix">Phoenix — $158–$203 / kW / mo</option>
+          <option value="seattle">Seattle / Pacific Northwest — $158–$203 / kW / mo</option>
+          <option value="dakotas">The Dakotas — $100–$170 / kW / mo</option>
+          <option value="national" selected>National average, primary markets (CBRE) — $194.95 / kW / mo</option>
+        </select>
+        <p class="hint" id="market-note">CBRE national average lease rate, primary markets: $194.95 per kW per month. The 250–500 kW benchmark is $204.69.</p>
+      </div>
+
+      <div class="field">
+        <label for="term">CONTRACT TERM</label>
+        <select id="term" onchange="calcColo()">
+          <option value="12">12 months</option>
+          <option value="24">24 months</option>
+          <option value="36" selected>36 months</option>
+          <option value="60">60 months</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="custom-low">YOUR QUOTED RATE — OPTIONAL, $ / kW / MO (LEAVE BLANK TO USE THE MARKET RATE)</label>
+        <input type="number" id="custom-low" min="1" max="1000" step="0.01" inputmode="decimal" placeholder="Low end — e.g. 170" oninput="calcColo()" style="max-width:200px;display:inline-block">
+        <input type="number" id="custom-high" min="1" max="1000" step="0.01" inputmode="decimal" placeholder="High end — e.g. 215" oninput="calcColo()" style="max-width:200px;display:inline-block">
+        <p class="hint">Enter both ends of a rate you have been quoted. A quoted rate replaces the market range above; it is never filled in for you.</p>
+      </div>
+
+      <div class="check">
+        <input type="checkbox" id="uplift" checked onchange="calcColo()">
+        <label class="check-tx" for="uplift"><strong>Add cross-connects, remote hands and billing-model uplift (+25–30%).</strong> Broker analysis finds these add 25–30% to the real monthly cost (full range 20–60% depending on connectivity). Uncheck to see the headline rate alone.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="liquid" onchange="calcColo()">
+        <label class="check-tx" for="liquid"><strong>Liquid cooling (+$45 / kW / mo).</strong> AI-ready space in Ashburn is quoted around $180/kW air-cooled and $225/kW liquid-cooled at 100 kW-plus per rack — a premium of roughly $45/kW-month, or $1,000–$2,000 per rack-month in retail structures.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="freemonths" onchange="calcColo()">
+        <label class="check-tx" for="freemonths"><strong>Deduct 2 free months at term start.</strong> Brokers report negotiating two to three free months at term start — only where capacity exists to negotiate over. In Ashburn at roughly 0.3% vacancy, there is a queue, not a negotiation.</label>
+      </div>
+
+      <div class="results" aria-live="polite">
+        <p class="res-label">ESTIMATED MONTHLY COST — COLOCATION</p>
+        <p class="res-big" id="out-monthly">$121,844 – $126,718 <span class="cy">/ mo</span></p>
+        <p class="res-line" id="out-base">Headline rate alone: $97,475 / mo (national average $194.95/kW).</p>
+        <p class="res-line" id="out-total">Estimated total over 36 months: $4,386,375 – $4,561,830.</p>
+        <p class="res-line" id="out-power">For comparison, raw electricity for the same load at the national benchmark $0.10–$0.12/kWh: $36,500 – $43,800 / mo at full draw, before cooling overhead and operator margin.</p>
+        <p class="res-note"><strong>Estimate.</strong> Exact pricing varies by provider, market, and contract terms. Figures are based on datacenterprices.com published market data (market-data edition last updated October 25, 2026; pricing articles October 17 and November 14, 2026). Asking rents are what landlords publish; signed rents are not published. Verify any figure against its source before relying on it.</p>
+      </div>
+    </div>
+
+    <div class="calc" id="calc-build" style="display:none">
+      <div class="field">
+        <label for="mw">FACILITY SIZE — MW</label>
+        <input type="number" id="mw" value="10" min="0.1" max="1000" step="0.1" inputmode="decimal" oninput="calcBuild()">
+        <p class="err" id="mw-err">Enter a size between 0.1 and 1,000 MW.</p>
+        <div class="quick">
+          <button type="button" onclick="setMw(1)">1 MW</button>
+          <button type="button" onclick="setMw(5)">5 MW</button>
+          <button type="button" onclick="setMw(10)">10 MW</button>
+          <button type="button" onclick="setMw(20)">20 MW</button>
+          <button type="button" onclick="setMw(60)">60 MW</button>
+        </div>
+        <p class="hint">IT capacity. Turner &amp; Townsend's 2026–27 cost index is built on a typical 60 MW design.</p>
+      </div>
+
+      <div class="field">
+        <label for="buildtype">FACILITY TYPE</label>
+        <select id="buildtype" onchange="calcBuild()">
+          <option value="standard" selected>Standard build — $11.3M per MW (JLL 2026)</option>
+          <option value="ai">AI-optimized build — $15–$20M+ per MW (JLL 2026)</option>
+        </select>
+        <p class="hint" id="build-note">JLL 2026 Global Data Center Outlook: shell-and-core cost, before land and compute.</p>
+      </div>
+
+      <div class="results" aria-live="polite">
+        <p class="res-label">ESTIMATED BUILD COST — ONE-TIME</p>
+        <p class="res-big" id="out-build">$113,000,000</p>
+        <p class="res-line" id="out-build-detail">10 MW × $11.3M per MW (JLL standard build, shell and core).</p>
+        <p class="res-line">For scale: the average data center project started in the first seven months of 2026 cost $1.06 billion, up from $352.8 million in 2025 (ConstructConnect).</p>
+        <p class="res-note"><strong>Estimate.</strong> Exact pricing varies by provider, market, and contract terms. Figures are based on datacenterprices.com published market data (market-data edition last updated October 25, 2026; construction-cost article November 14, 2026). Build cost is before land and compute. Region moves the number by up to 40% (Turner &amp; Townsend), and a site that needs a substation or a 24–48 month grid connection carries infrastructure cost no per-MW table captures.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:64px">
+    <p class="sec-label">// THE RATES BEHIND THE CALCULATOR</p>
+    <h2>Published rates, with sources</h2>
+    <p class="body-p">These tables are the calculator's inputs, printed in full. They render without JavaScript: the interactive version above only does the arithmetic. Nothing on this page is a rate this site has not already published.</p>
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>Market — colocation, $ / kW / mo</th><th>Published range</th><th>Basis &amp; source</th></tr>
+      <tr><td><strong>National average, primary markets</strong></td><td>$194.95</td><td>CBRE lease rate; 250–500 kW benchmark $204.69 (H1 2026)</td></tr>
+      <tr><td><strong>Northern Virginia (Ashburn)</strong></td><td>$158–$203</td><td>Broker-quoted 2026 range, 10 kW rack; CBRE asking rents $190–$235 (250–500 kW, Q1 2026)</td></tr>
+      <tr><td><strong>Dallas–Fort Worth</strong></td><td>$158–$203</td><td>Broker-quoted 2026 range, 10 kW rack; $135–$179 at 50 kW</td></tr>
+      <tr><td><strong>Chicago</strong></td><td>$179–$230</td><td>Broker-quoted 2026 range, 10 kW rack; CBRE $200–$230, up 14.7% YoY</td></tr>
+      <tr><td><strong>Silicon Valley</strong></td><td>$179–$225</td><td>Broker-quoted 2026 range; CBRE 10 MW+ requirements $180–$275</td></tr>
+      <tr><td><strong>Atlanta</strong></td><td>$158–$203</td><td>Broker-quoted 2026 range, 10 kW rack</td></tr>
+      <tr><td><strong>Phoenix</strong></td><td>$158–$203</td><td>Broker-quoted 2026 range, 10 kW rack</td></tr>
+      <tr><td><strong>Seattle / Pacific Northwest</strong></td><td>$158–$203</td><td>Broker-quoted 2026 range, 10 kW rack</td></tr>
+      <tr><td><strong>The Dakotas</strong></td><td>$100–$170</td><td>Broker-quoted 2026 range; lowest power cost in the US</td></tr>
+    </table>
+    </div>
+    <p class="src">Source: datacenterprices.com market data (October 25, 2026) and "Data Center Rates &amp; Colocation Pricing 2026" (October 17, 2026). Requirement size is stated on every rent figure; figures from different requirement tiers are not averaged together.</p>
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>What else the quote carries</th><th>Published figure</th><th>Source</th></tr>
+      <tr><td><strong>Full cabinet, retail list price</strong></td><td>$599–$1,500 / mo (42U); 1.92 kW cabinet ~$608, 5 kW ~$1,058, each plus a $500 setup fee on a one-year term</td><td>Provider list prices, early 2026</td></tr>
+      <tr><td><strong>Full cabinet, broker-quoted metros</strong></td><td>$1,500–$2,325 / mo (Buffalo low, New York high)</td><td>Broker reporting, 2026</td></tr>
+      <tr><td><strong>Average revenue per billed cabinet</strong></td><td>$2,538 / mo, including interconnection</td><td>Equinix, worldwide, Q2 2026</td></tr>
+      <tr><td><strong>Cross-connects, remote hands, billing model</strong></td><td>Adds 25–30% to the real monthly cost (full range 20–60%)</td><td>Broker analysis, 2026</td></tr>
+      <tr><td><strong>Liquid-cooling premium</strong></td><td>~$45 / kW / mo; $1,000–$2,000 per rack-month in retail structures</td><td>Market reporting, 2026</td></tr>
+      <tr><td><strong>Space alone, retail structures</strong></td><td>$1,200–$3,500 per rack-month, billed separately from power</td><td>Broker analysis, 2026</td></tr>
+      <tr><td><strong>Power, Northern Virginia</strong></td><td>$0.095–$0.13 / kWh; Phoenix $0.058–$0.078; Dallas–Fort Worth $0.0972</td><td>Operator / utility figures</td></tr>
+      <tr><td><strong>Power, national benchmark</strong></td><td>$0.10–$0.12 / kWh; at $0.10/kWh, 1 MW of continuous load costs about $72,000 / mo in electricity alone</td><td>Benchmarks used in total-cost modeling</td></tr>
+      <tr><td><strong>Build cost, standard</strong></td><td>$11.3M per MW, before land and compute</td><td>JLL 2026 Global Data Center Outlook</td></tr>
+      <tr><td><strong>Build cost, AI-optimized</strong></td><td>$15–$20M+ per MW, before land and compute</td><td>JLL 2026 Global Data Center Outlook</td></tr>
+      <tr><td><strong>Build cost, all-in greenfield</strong></td><td>$17.6M per MW once land and power infrastructure are counted, up 21% since late 2024</td><td>Cushman &amp; Wakefield 2026 guide</td></tr>
+    </table>
+    </div>
+    <p class="src">Source: datacenterprices.com market data (October 25, 2026) and the pricing, power, and construction-cost articles (October 17 and November 14, 2026).</p>
+  </section>
+
+  <section style="margin-top:64px">
+    <p class="sec-label">// METHODOLOGY</p>
+    <h2>How the estimate is built</h2>
+    <p class="body-p">Monthly colocation cost is capacity in kW multiplied by the market's published per-kW-month range. The total over the term is the monthly figure multiplied by the number of billed months. The liquid-cooling toggle adds $45 per kW per month; the uplift toggle multiplies the monthly figure by 1.25 at the low end and 1.30 at the high end, matching the published 25–30% range; the free-months toggle deducts two billed months. The electricity comparison line is capacity × 730 hours × the published $/kWh range — 730 hours is a 24×7 month — and covers the IT load at full draw only, before cooling overhead. A typical PUE of 1.4 means the facility draws 1.4 MW to deliver 1 MW of compute, so the raw-electricity line understates the metered bill by design; it is shown for scale, not added to the total.</p>
+    <p class="body-p">The build estimate is capacity in MW multiplied by JLL's published per-MW benchmark: $11.3 million for a standard build, $15–$20 million-plus for an AI-optimized one, both before land and compute. By tier, the published ranges run $8–$10 million per MW for Tier II, $10–$12 million for Tier III, $12–$15 million for Tier IV, and $15–$20 million-plus for AI-optimized — the calculator uses the two JLL headline benchmarks and leaves tier detail to the construction-cost article.</p>
+    <p class="body-p">The honest limitation is the data itself. These are asking rents and published benchmarks, compiled from CBRE, JLL, Cushman &amp; Wakefield, Turner &amp; Townsend, Equinix, and operator and utility figures as reported in public benchmarks. Negotiated signed rents are not published by any operator, so no calculator can show them. A 135 kW rack at $200/kW-month is $27,000 a month in power alone — at that scale, a 10% difference in the power rate is worth more than most one-time concessions, and the only number that settles a negotiation is a quote on identical assumptions. Get three, on the same per-kW-month basis, with the same billing model, cross-connects, and cooling. Then re-run the math every renewal cycle: the average project cost tripled in a year, and last year's rate is not a benchmark.</p>
+  </section>
+
+  <section style="margin-top:64px">
+    <p class="sec-label">// MORE_INSIGHTS</p>
+    <div class="more-grid">
+      <a class="more-card" href="https://datacenterprices.com/insights/article1"><span class="mk">INSIGHT_01</span><span class="mt">Data Center Rates &amp; Colocation Pricing 2026: What a Rack Costs by Market</span></a>
+      <a class="more-card" href="https://datacenterprices.com/insights/article2"><span class="mk">INSIGHT_02</span><span class="mt">Data Center Power &amp; Running Costs: The Hidden Variable in AI Infrastructure</span></a>
+      <a class="more-card" href="https://datacenterprices.com/insights/article3"><span class="mk">INSIGHT_03</span><span class="mt">Data Center Cost Breakdown: AI Infrastructure Cost — Build vs. Colo vs. Cloud</span></a>
+      <a class="more-card" href="https://datacenterprices.com/insights/article6"><span class="mk">INSIGHT_06</span><span class="mt">Data Center Construction Cost: What It Costs to Build a Data Center in 2026</span></a>
+      <a class="more-card" href="https://datacenterprices.com/market-data"><span class="mk">MARKET DATA</span><span class="mt">Data Center Pricing: Colocation Rates, Power &amp; Build Costs — Market Data 2026</span></a>
+    </div>
+  </section>
+</main>
+
+<section class="cta-sec"><div class="cta-box"><div class="cta-in">
+  <p class="sec-label">// ACQUIRE</p>
+  <h2>datacenterprices.com<br><span style="color:var(--cy)">$15,888</span></h2>
+  <p>Offered by Prime Domain Capital. Secure transfer via Afternic. Inquiries: <a href="mailto:info@primedomaincapital.com" style="color:var(--cy)">info@primedomaincapital.com</a></p>
+  <div class="cta-row">
+    <a class="buy" href="https://www.afternic.com/domain/datacenterprices.com">ACQUIRE →</a>
+    <a class="ghost" href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a>
+  </div></div></div></section>
+<footer>
+  <span>© 2026 PRIME DOMAIN CAPITAL · DATACENTERPRICES.COM</span>
+  <span>TRANSFER VIA <a href="https://www.afternic.com/domain/datacenterprices.com">AFTERNIC</a> · <a href="mailto:info@primedomaincapital.com">CONTACT</a></span>
+</footer>
+<script>
+/* Data Center Cost Calculator — all rates from datacenterprices.com published
+   market data (market-data edition, last updated October 25, 2026) and the
+   pricing / power / construction-cost articles (Oct 17 and Nov 14, 2026).
+   No rate on this page is estimated by the page itself. */
+var RATES = {
+  nova:         {label: "Northern Virginia (Ashburn)", low: 158, high: 203, pLow: 0.095, pHigh: 0.13,  pNote: "published power price, Northern Virginia", note: "Broker-quoted 2026 range for a 10 kW rack. CBRE asking rents for a 250–500 kW requirement run $190–$235."},
+  dallas:       {label: "Dallas–Fort Worth", low: 158, high: 203, pLow: 0.0972, pHigh: 0.0972, pNote: "published power price, Dallas–Fort Worth", note: "Broker-quoted 2026 range for a 10 kW rack. At 50 kW the published range is $135–$179."},
+  chicago:      {label: "Chicago", low: 179, high: 230, pLow: null, pHigh: null, pNote: "national benchmark; no market-specific power price published", note: "Broker-quoted 2026 range for a 10 kW rack. CBRE asking rents run $200–$230, up 14.7% year over year."},
+  siliconvalley:{label: "Silicon Valley", low: 179, high: 225, pLow: null, pHigh: null, pNote: "national benchmark; no market-specific power price published", note: "Broker-quoted 2026 range. CBRE quotes $180–$275 for 10 MW+ requirements."},
+  atlanta:      {label: "Atlanta", low: 158, high: 203, pLow: null, pHigh: null, pNote: "national benchmark; no market-specific power price published", note: "Broker-quoted 2026 range for a 10 kW rack."},
+  phoenix:      {label: "Phoenix", low: 158, high: 203, pLow: 0.058, pHigh: 0.078, pNote: "published power price, Phoenix", note: "Broker-quoted 2026 range for a 10 kW rack."},
+  seattle:      {label: "Seattle / Pacific Northwest", low: 158, high: 203, pLow: null, pHigh: null, pNote: "national benchmark; no market-specific power price published", note: "Broker-quoted 2026 range for a 10 kW rack."},
+  dakotas:      {label: "The Dakotas", low: 100, high: 170, pLow: null, pHigh: null, pNote: "national benchmark; no market-specific power price published", note: "Broker-quoted 2026 range; the lowest power cost in the country, with limited carrier depth."},
+  national:     {label: "National average, primary markets (CBRE)", low: 194.95, high: 194.95, pLow: null, pHigh: null, pNote: "national benchmark", note: "CBRE national average lease rate, primary markets: $194.95 per kW per month. The 250–500 kW benchmark is $204.69."}
+};
+var HOURS_PER_MONTH = 730; /* 24 x 7 month; site's own anchor: ~$72,000/mo per MW at $0.10/kWh */
+
+function usd(n, dec) {
+  return n.toLocaleString("en-US", {style: "currency", currency: "USD", minimumFractionDigits: dec || 0, maximumFractionDigits: dec || 0});
+}
+function fmtKwh(v) {
+  var t = v.toFixed(4).replace(/0+$/, "").replace(/\.$/, "");
+  if (/\.\d$/.test(t)) { t += "0"; }
+  return t;
+}
+function num(el) {
+  var v = parseFloat(el.value);
+  return isNaN(v) ? null : v;
+}
+function setMode(mode) {
+  document.getElementById("mode-colo").setAttribute("aria-pressed", mode === "colo" ? "true" : "false");
+  document.getElementById("mode-build").setAttribute("aria-pressed", mode === "build" ? "true" : "false");
+  document.getElementById("calc-colo").style.display = mode === "colo" ? "" : "none";
+  document.getElementById("calc-build").style.display = mode === "build" ? "" : "none";
+  if (mode === "colo") { calcColo(); } else { calcBuild(); }
+}
+function setKw(v) {
+  document.getElementById("kw").value = v;
+  calcColo();
+}
+function setMw(v) {
+  document.getElementById("mw").value = v;
+  calcBuild();
+}
+
+function calcColo() {
+  var kwEl = document.getElementById("kw");
+  var kw = num(kwEl);
+  var err = document.getElementById("kw-err");
+  if (kw === null || kw < 1 || kw > 100000) {
+    err.style.display = "block";
+    kw = 500;
+  } else {
+    err.style.display = "none";
+  }
+  var m = RATES[document.getElementById("market").value] || RATES.national;
+  document.getElementById("market-note").textContent = m.note;
+
+  var cLow = num(document.getElementById("custom-low"));
+  var cHigh = num(document.getElementById("custom-high"));
+  var rateLow = m.low, rateHigh = m.high, rateSrc = m.label + " published range";
+  if (cLow !== null && cHigh !== null && cLow > 0 && cHigh >= cLow && cLow <= 1000 && cHigh <= 1000) {
+    rateLow = cLow; rateHigh = cHigh; rateSrc = "your quoted rate";
+  }
+
+  var baseLow = kw * rateLow, baseHigh = kw * rateHigh;
+  var mLow = baseLow, mHigh = baseHigh;
+  if (document.getElementById("liquid").checked) { mLow += kw * 45; mHigh += kw * 45; }
+  var uplift = document.getElementById("uplift").checked;
+  if (uplift) { mLow = mLow * 1.25; mHigh = mHigh * 1.30; }
+
+  var term = parseInt(document.getElementById("term").value, 10) || 36;
+  var billed = term;
+  if (document.getElementById("freemonths").checked) { billed = Math.max(1, term - 2); }
+  var tLow = mLow * billed, tHigh = mHigh * billed;
+
+  var moTxt = mLow === mHigh ? usd(mLow) : usd(mLow) + " – " + usd(mHigh);
+  document.getElementById("out-monthly").innerHTML = moTxt + ' <span class="cy">/ mo</span>';
+  var baseTxt = baseLow === baseHigh ? usd(baseLow) : usd(baseLow) + " – " + usd(baseHigh);
+  var rateTxt = (rateLow === rateHigh) ? usd(rateLow, rateLow % 1 ? 2 : 0) + " / kW / mo" : usd(rateLow, rateLow % 1 ? 2 : 0) + "–" + usd(rateHigh, rateHigh % 1 ? 2 : 0) + " / kW / mo";
+  document.getElementById("out-base").innerHTML = "Headline rate alone: <strong>" + baseTxt + " / mo</strong> (" + rateSrc + ": " + rateTxt + " for " + kw.toLocaleString("en-US") + " kW).";
+  var totTxt = tLow === tHigh ? usd(tLow) : usd(tLow) + " – " + usd(tHigh);
+  var freeTxt = document.getElementById("freemonths").checked ? " (" + billed + " billed months of a " + term + "-month term, after 2 free months)" : " (" + term + " months)";
+  document.getElementById("out-total").innerHTML = "Estimated total over " + term + " months: <strong>" + totTxt + "</strong>" + freeTxt + ".";
+
+  var pLow = (m.pLow !== null) ? m.pLow : 0.10;
+  var pHigh = (m.pHigh !== null) ? m.pHigh : 0.12;
+  var eLow = kw * HOURS_PER_MONTH * pLow, eHigh = kw * HOURS_PER_MONTH * pHigh;
+  var eTxt = eLow === eHigh ? usd(eLow) : usd(eLow) + " – " + usd(eHigh);
+  document.getElementById("out-power").innerHTML = "For comparison, raw electricity for the same load: <strong>" + eTxt + " / mo</strong> ($" + fmtKwh(pLow) + "–$" + fmtKwh(pHigh) + "/kWh — " + m.pNote + "), at full draw, before cooling overhead and operator margin.";
+}
+
+function calcBuild() {
+  var mwEl = document.getElementById("mw");
+  var mw = num(mwEl);
+  var err = document.getElementById("mw-err");
+  if (mw === null || mw < 0.1 || mw > 1000) {
+    err.style.display = "block";
+    mw = 10;
+  } else {
+    err.style.display = "none";
+  }
+  var type = document.getElementById("buildtype").value;
+  var note = document.getElementById("build-note");
+  var out = document.getElementById("out-build");
+  var detail = document.getElementById("out-build-detail");
+  if (type === "standard") {
+    var cost = mw * 11300000;
+    out.textContent = usd(cost);
+    detail.textContent = mw.toLocaleString("en-US") + " MW × $11.3M per MW (JLL standard build, shell and core).";
+    note.textContent = "JLL 2026 Global Data Center Outlook: shell-and-core cost, before land and compute.";
+  } else {
+    var lo = mw * 15000000, hi = mw * 20000000;
+    out.textContent = usd(lo) + " – " + usd(hi) + "+";
+    detail.textContent = mw.toLocaleString("en-US") + " MW × $15–$20M+ per MW (JLL AI-optimized build, shell and core). The “+” marks the open top end of the published range.";
+    note.textContent = "JLL 2026 Global Data Center Outlook: shell-and-core cost, before land and compute. Turner & Townsend puts the most advanced AI-specific facilities at $14–$16 per watt.";
+  }
+}
+
+calcColo();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
