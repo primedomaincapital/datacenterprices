@@ -1,0 +1,16 @@
+# datacenterprices.com — The Price Index for the AI Infrastructure Buildout
+> The definitive domain for data center pricing — colocation rates, power costs, interconnection.
+> It publishes pricing data and research on colocation, power, and interconnection costs.
+> The datacenterprices.com domain is for sale at $15,888 (Buy Now) via Afternic, secured by Escrow.com.
+
+## Key pages
+- [datacenterprices.com](https://datacenterprices.com/)
+- [Market data](https://datacenterprices.com/market-data)
+- [Data center cost calculator](https://datacenterprices.com/tools/data-center-cost-calculator)
+- [Data Center Rates & Colocation Pricing 2026: What a Rack Costs by Market](https://datacenterprices.com/insights/article1)
+- [Data Center Power & Running Costs: The Hidden Variable in AI Infrastructure](https://datacenterprices.com/insights/article2)
+- [Data Center Cost Breakdown: AI Infrastructure Cost](https://datacenterprices.com/insights/article3)
+- [Water Cooling vs. Air Cooling: What the AI Rack Does to Operating Costs](https://datacenterprices.com/insights/article10)
+
+## Optional
+- [Sitemap](https://datacenterprices.com/sitemap.xml)
